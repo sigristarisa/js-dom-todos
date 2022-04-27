@@ -27,4 +27,5 @@ submit.addEventListener("submit", (e) => {
     .then((todo) => {
       createTodoLi(todo);
     });
+  e.target.reset();
 });
