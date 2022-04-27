@@ -1,15 +1,6 @@
 import createTodoLi from "./createTodoLi.js";
 const submit = document.querySelector("form");
 
-// get data
-fetch("http://localhost:3000/todos")
-  .then((res) => res.json())
-  .then((todos) => {
-    todos.forEach((todo) => {
-      createTodoLi(todo);
-    });
-  });
-
 submit.addEventListener("submit", (e) => {
   e.preventDefault();
   const newTodo = {

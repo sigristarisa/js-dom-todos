@@ -30,7 +30,7 @@ const createTodoLi = (todo) => {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((todo) => {
+      .then(() => {
         todoLi.remove();
       });
   });
