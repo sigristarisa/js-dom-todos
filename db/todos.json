@@ -1,23 +1,18 @@
 {
   "todos": [
     {
-      "title": "Go to grocery store",
-      "completed": false,
-      "id": 1
-    },
-    {
       "title": "Cook dinner",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
       "title": "Clean the dishes",
-      "completed": false,
+      "completed": true,
       "id": 3
     },
     {
       "title": "Shoulder massage",
-      "completed": false,
+      "completed": true,
       "id": 4
     }
   ]

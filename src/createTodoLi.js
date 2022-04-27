@@ -1,3 +1,6 @@
+import patchRequest from "./patchRequest.js";
+import deleteRequest from "./deleteRequest.js";
+
 const createTodoLi = (todo) => {
   const todoUl = document.querySelector("#todo-list");
   const todoLi = document.createElement("li");
@@ -11,28 +14,12 @@ const createTodoLi = (todo) => {
   todoUl.append(todoLi);
 
   completeBtn.addEventListener("click", () => {
-    const opts = {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ completed: true }),
-    };
-
-    // update data (patch)
-    fetch(`http://localhost:3000/todos/${todo.id}`, opts)
-      .then((res) => res.json())
-      .then((todo) => {
-        todoLi.innerHTML = `<s>${todo.title}</s>`;
-      });
+    patchRequest(todo, todoLi);
   });
 
+  // delete data
   deleteBtn.addEventListener("click", () => {
-    fetch(`http://localhost:3000/todos/${todo.id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then(() => {
-        todoLi.remove();
-      });
+    deleteRequest(todo, todoLi);
   });
 };
 
