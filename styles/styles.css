@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap"); /* font-family: 'Righteous', cursive;*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); /* font-family: 'Montserrat', sans-serif; */
+
+html {
+  --main-clr: rgba(123, 224, 255, 0.637);
+  --sub-clr: rgba(253, 238, 170, 0.877);
+  --text-clr: rgb(196, 1, 1);
+  --delete-clr: rgba(250, 108, 108, 0.61);
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-clr);
+  background-color: var(--main-clr);
+}
+
+h2 {
+  font-family: "Righteous", cursive;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+input {
+  width: 500px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--sub-clr);
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid var(--text-clr);
+}
+
+button,
+input[type="submit"] {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-clr);
+  background-color: var(--sub-clr);
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  color: var(--sub-clr);
+  background-color: var(--text-clr);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--delete-clr);
+}
