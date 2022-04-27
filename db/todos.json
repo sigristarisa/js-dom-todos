@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "Feed the cat",
-      "completed": true
-    },
-    {
       "id": 2,
       "title": "Cut the grass",
       "completed": false
