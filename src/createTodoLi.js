@@ -17,7 +17,9 @@ const createTodoLi = (todo) => {
   todoUl.append(todoLi);
 
   completeBtn.addEventListener("click", () => {
-    patchRequest(todo, todoLi);
+    todo.completed
+      ? patchRequest(todo, todoLi, false)
+      : patchRequest(todo, todoLi, true);
   });
 
   // delete data

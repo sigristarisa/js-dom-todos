@@ -1,10 +1,10 @@
 import updateTodoLi from "./updateTodoLi.js";
 
-const patchRequest = (todo, todoLi) => {
+const patchRequest = (todo, todoLi, isCompleted) => {
   const opts = {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ completed: true }),
+    body: JSON.stringify({ completed: isCompleted }),
   };
 
   // update data (patch)

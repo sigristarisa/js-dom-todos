@@ -6,24 +6,24 @@
       "id": 4
     },
     {
-      "title": "Take a bath",
-      "completed": true,
-      "id": 5
-    },
-    {
       "title": "Go to grocery shopping",
       "completed": true,
       "id": 6
     },
     {
       "title": "ioioioi",
-      "completed": false,
+      "completed": true,
       "id": 7
     },
     {
       "title": "hi",
-      "completed": false,
+      "completed": true,
       "id": 8
+    },
+    {
+      "title": "refactor the code",
+      "completed": true,
+      "id": 9
     }
   ]
 }
