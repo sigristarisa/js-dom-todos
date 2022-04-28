@@ -1,3 +1,5 @@
+import updateTodoLi from "./updateTodoLi.js";
+
 const patchRequest = (todo, todoLi) => {
   const opts = {
     method: "PATCH",
@@ -9,7 +11,7 @@ const patchRequest = (todo, todoLi) => {
   fetch(`http://localhost:3000/todos/${todo.id}`, opts)
     .then((res) => res.json())
     .then((todo) => {
-      if (todo.completed) todoLi.setAttribute("class", "completed");
+      updateTodoLi(todo, todoLi);
     });
 };
 
